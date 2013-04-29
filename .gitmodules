@@ -1,0 +1,6 @@
+[submodule "lib/spreadsheet-js"]
+	path = lib/spreadsheet-js
+	url = https://github.com/netbrain/spreadsheet-js
+[submodule "lib/zip"]
+	path = lib/zip
+	url = https://github.com/gildas-lormeau/zip.js
