@@ -12,7 +12,7 @@ $messages = array();
  * @author Kim Eik
  */
 $messages['en'] = array(
-	'spreadsheet-desc' => 'An interactive web frontend capable of reading and modifying uploaded spreadsheet files.',
+	'spreadsheet-desc' => 'An interactive web frontend capable of reading and modifying uploaded spreadsheet files',
 );
 
 /** Message documentation (Message documentation)
