@@ -21,3 +21,31 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'spreadsheet-desc' => '{{desc}}',
 );
+
+/** German (Deutsch)
+ * @author Metalhead64
+ */
+$messages['de'] = array(
+	'spreadsheet-desc' => 'Ein interaktives Web-Frontend zum Lesen und Bearbeiten von hochgeladenen Tabellenkalkulationsdateien.',
+);
+
+/** French (français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'spreadsheet-desc' => 'Un terminal web interactif capable de lire et modifier les fichiers de feuille de calcul téléchargés',
+);
+
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'spreadsheet-desc' => 'アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド',
+);
+
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'spreadsheet-desc' => "'Nu frontend via web inderattive ca jè cpace de leggere e cangià le file de fogghie de calcole carecate",
+);
