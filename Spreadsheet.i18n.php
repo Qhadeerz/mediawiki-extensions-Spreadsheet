@@ -43,6 +43,13 @@ $messages['ja'] = array(
 	'spreadsheet-desc' => 'アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'spreadsheet-desc' => 'Interactief webfrontend dat geüploade spreadsheetbestanden kan lezen en wijzigen',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
