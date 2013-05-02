@@ -29,6 +29,13 @@ $messages['de'] = array(
 	'spreadsheet-desc' => 'Ein interaktives Web-Frontend zum Lesen und Bearbeiten von hochgeladenen Tabellenkalkulationsdateien.',
 );
 
+/** Spanish (español)
+ * @author Fortega
+ */
+$messages['es'] = array(
+	'spreadsheet-desc' => 'Interfaz web interactiva con capacidad para leer y cambiar hojas de cálculo subidas',
+);
+
 /** French (français)
  * @author Gomoko
  */
@@ -41,6 +48,13 @@ $messages['fr'] = array(
  */
 $messages['ja'] = array(
 	'spreadsheet-desc' => 'アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'spreadsheet-desc' => 'Интерактивна алатка за читање и менување на подигнати пресметковни табели',
 );
 
 /** Dutch (Nederlands)
