@@ -115,7 +115,16 @@ $(document).ready(function(){
 		return function(e){
 			var point = c.get(e.cell.position);
 			try{
-				point.update(e.cell.valueOf());
+				point.update(e.cell.valueOf(),false);
+				if(!c.redrawTimer){
+					c.redrawTimer = setTimeout((function(chart){
+						return function(){
+							chart.redraw();
+							clearTimeout(chart.redrawTimer);
+							delete chart.redrawTimer;
+						};
+					})(c),1000);
+				}
 			}catch(err){
 				alert('Error occured while updating point!');
 			}
@@ -217,9 +226,6 @@ $(document).ready(function(){
 					name:spreadsheet.getCellValue(series.name)
 				});
 			}
-			console.log(JSON.stringify(config,function(key,val){
-				return key == "id" ? val.toString() : val;
-			},2));
 			new Highcharts.Chart(config,getOnLoadCallback(spreadsheet));
 			//Chart is now appended, so lets clear the interval
 			clearInterval(appendChartInterval);
