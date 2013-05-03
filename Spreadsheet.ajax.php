@@ -10,7 +10,8 @@ class SpreadsheetAjax {
 			$reader = PHPExcel_IOFactory::createReader($readerType);
 
 			if($reader instanceof PHPExcel_Reader_Excel2007){
-				$sheetName = $reader->listWorksheetNames($file->getLocalRefPath())[$sheetIndex];
+				$sheetNames = $reader->listWorksheetNames($file->getLocalRefPath());
+				$sheetName = $sheetNames[$sheetIndex];
 				$reader->setLoadSheetsOnly($sheetName);
 				$reader->setIncludeCharts(true);
 				$reader->setReadDataOnly(false);
