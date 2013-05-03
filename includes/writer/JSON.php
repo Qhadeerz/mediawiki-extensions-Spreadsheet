@@ -161,7 +161,8 @@ class PHPExcel_Writer_JSON {
 	}
 
 	public function getChartTitle ( PHPExcel_Chart_Title $title ) {
-		return $this->getRichText( $title->getCaption()[ 0 ] );
+		$captions = $title->getCaption();
+		return $this->getRichText( $captions[ 0 ] );
 	}
 
 	private function getRichText ( PHPExcel_RichText $text ) {
