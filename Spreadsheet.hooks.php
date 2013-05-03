@@ -9,6 +9,8 @@ class SpreadsheetHooks {
 
 	public static function renderFromTag($input, array $args, Parser $parser, PPFrame $frame) {
 		$file = wfLocalFile($args['file']);
+		$style = isset($args['style']) ? $args['style'] : 'height: 600px;'; //css style parameter definition
+		$class = isset($args['class']) ? $args['class'] : 'spreadsheet-container'; //space separated list of css classes
 		if($file->exists()){
 			$parser->getOutput()->addModules('spreadsheet.core');
 
@@ -25,7 +27,7 @@ class SpreadsheetHooks {
 				'adapter' => 'phpexcel',
 				'file' => $args['file'],
 				'sheet' => isset($args['sheet']) ? $args['sheet'] : '0',
-			)), 'noparse' => true, 'isHTML' => true);
+			),$class,$style), 'noparse' => true, 'isHTML' => true);
 		}else{
 			return "file doesn't exist";
 		}
@@ -54,7 +56,7 @@ class SpreadsheetHooks {
 		return true;
 	}
 
-	private static function getOutputHTML($id,$data){
+	private static function getOutputHTML($id,$data,$class,$style){
 		$data = json_encode($data);
 		return <<<HTML
 			<script type="text/javascript">
@@ -65,7 +67,7 @@ class SpreadsheetHooks {
 				window.spreadsheet['$id'] = $data;
 				-->
 			</script>
-			<div id="$id" class="spreadsheet-container" style="height: 500px;">
+			<div id="$id" class="$class" style="$style">
 				<div class="progressbar"></div>
 			</div>
 HTML;
