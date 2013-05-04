@@ -22,6 +22,13 @@ $messages['qqq'] = array(
 	'spreadsheet-desc' => '{{desc}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'spreadsheet-desc' => "'n Interaktiewe web-koppelvlak wat gelaaide spreitabelle kan lees en wysig.",
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -30,10 +37,11 @@ $messages['de'] = array(
 );
 
 /** Spanish (español)
+ * @author Fitoschido
  * @author Fortega
  */
 $messages['es'] = array(
-	'spreadsheet-desc' => 'Interfaz web interactiva con capacidad para leer y cambiar hojas de cálculo subidas',
+	'spreadsheet-desc' => 'Una interfaz web interactiva que permite leer y modificar hojas de cálculo cargadas',
 );
 
 /** French (français)
@@ -48,6 +56,20 @@ $messages['fr'] = array(
  */
 $messages['ja'] = array(
 	'spreadsheet-desc' => 'アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド',
+);
+
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'spreadsheet-desc' => '올린 스프레드시트 파일을 읽고 수정할 수 있는 대화형 웹 프론트엔드',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'spreadsheet-desc' => 'En interaktive Web-Frontend deen eropgeluede Tabellekalkulatiouns-Fchiere liesen a verschaffe kann',
 );
 
 /** Macedonian (македонски)
