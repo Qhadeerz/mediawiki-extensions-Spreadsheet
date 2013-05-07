@@ -12,7 +12,8 @@ $messages = array();
  * @author Kim Eik
  */
 $messages['en'] = array(
-	'spreadsheet-desc' => 'An interactive web frontend capable of reading and modifying uploaded spreadsheet files',
+	'spreadsheet-desc' => 'An interactive web frontend capable of reading and modifying uploaded spreadsheet files.',
+	'spreadsheet-loading' => 'Please wait, spreadsheet is loading.',
 );
 
 /** Message documentation (Message documentation)
@@ -20,6 +21,7 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'spreadsheet-desc' => '{{desc}}',
+	'spreadsheet-loading' => 'text visible on progressbar while loading spreadsheet',
 );
 
 /** Afrikaans (Afrikaans)

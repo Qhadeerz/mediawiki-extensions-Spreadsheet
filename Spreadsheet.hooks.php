@@ -58,6 +58,7 @@ class SpreadsheetHooks {
 
 	private static function getOutputHTML($id,$data,$class,$style){
 		$data = json_encode($data);
+		$progressLabel = wfMessage( 'spreadsheet-loading')->parse();
 		return <<<HTML
 			<script type="text/javascript">
 				<!--
@@ -68,7 +69,10 @@ class SpreadsheetHooks {
 				-->
 			</script>
 			<div id="$id" class="$class" style="$style">
-				<div class="progressbar"></div>
+				<div class="progressbar-container">
+					<div class="progressbar"></div>
+					<div class="progress-label">$progressLabel</div>
+				</div>
 			</div>
 HTML;
 	}
