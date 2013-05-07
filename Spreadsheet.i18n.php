@@ -94,3 +94,12 @@ $messages['nl'] = array(
 $messages['roa-tara'] = array(
 	'spreadsheet-desc' => "'Nu frontend via web inderattive ca jè cpace de leggere e cangià le file de fogghie de calcole carecate",
 );
+
+/** Russian (русский)
+ * @author Eleferen
+ * @author Kaganer
+ */
+$messages['ru'] = array(
+	'spreadsheet-desc' => 'Интерактивная веб-компонента, позволяющая просматривать и редактировать загруженные табличные файлы',
+	'spreadsheet-loading' => 'Пожалуйста подождите, идёт загрузка.',
+);
