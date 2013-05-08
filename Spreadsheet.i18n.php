@@ -18,10 +18,11 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Kim Eik
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'spreadsheet-desc' => '{{desc}}',
-	'spreadsheet-loading' => 'text visible on progressbar while loading spreadsheet',
+	'spreadsheet-desc' => '{{desc|name=Spreadsheet|url=http://www.mediawiki.org/wiki/Extension:Spreadsheet}}',
+	'spreadsheet-loading' => 'text visible on progressbar while loading a spreadsheet file.',
 );
 
 /** Afrikaans (Afrikaans)
@@ -36,6 +37,7 @@ $messages['af'] = array(
  */
 $messages['de'] = array(
 	'spreadsheet-desc' => 'Ein interaktives Web-Frontend zum Lesen und Bearbeiten von hochgeladenen Tabellenkalkulationsdateien.',
+	'spreadsheet-loading' => 'Bitte warten. Arbeitsblatt wird geladen.',
 );
 
 /** Spanish (español)
@@ -53,11 +55,20 @@ $messages['fr'] = array(
 	'spreadsheet-desc' => 'Un terminal web interactif capable de lire et modifier les fichiers de feuille de calcul téléchargés',
 );
 
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'spreadsheet-desc' => 'Unha estrutura web interactiva capaz de ler e modificar follas de cálculo cargadas',
+	'spreadsheet-loading' => 'Por favor, agarde. Cargando a folla de cálculo.',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
 $messages['ja'] = array(
 	'spreadsheet-desc' => 'アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド',
+	'spreadsheet-loading' => 'お待ちください。表計算ファイルを読み込んでいます。',
 );
 
 /** Korean (한국어)
@@ -79,6 +90,7 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'spreadsheet-desc' => 'Интерактивна алатка за читање и менување на подигнати пресметковни табели',
+	'spreadsheet-loading' => 'Почекајте. Вчитувам.',
 );
 
 /** Dutch (Nederlands)
@@ -88,11 +100,19 @@ $messages['nl'] = array(
 	'spreadsheet-desc' => 'Interactief webfrontend dat geüploade spreadsheetbestanden kan lezen en wijzigen',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'spreadsheet-loading' => 'لطفاً تم شۍ، سپرېډشيټ برسېرېدو کې دی.',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
 	'spreadsheet-desc' => "'Nu frontend via web inderattive ca jè cpace de leggere e cangià le file de fogghie de calcole carecate",
+	'spreadsheet-loading' => "Pe piacere aspitte, 'u fogghe de fatìe ste careche.",
 );
 
 /** Russian (русский)
