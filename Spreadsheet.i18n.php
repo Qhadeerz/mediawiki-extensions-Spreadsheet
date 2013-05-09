@@ -32,6 +32,13 @@ $messages['af'] = array(
 	'spreadsheet-desc' => "'n Interaktiewe web-koppelvlak wat gelaaide spreitabelle kan lees en wysig.",
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'spreadsheet-loading' => 'অনুগ্রহ করে অপেক্ষা করুন, স্প্রেডশিট লোড হচ্ছে।',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -83,6 +90,7 @@ $messages['ko'] = array(
  */
 $messages['lb'] = array(
 	'spreadsheet-desc' => 'En interaktive Web-Frontend deen eropgeluede Tabellekalkulatiouns-Fchiere liesen a verschaffe kann',
+	'spreadsheet-loading' => "Waart w.e.g. D'Spreadsheet gëtt gelueden.",
 );
 
 /** Macedonian (македонски)
@@ -98,6 +106,7 @@ $messages['mk'] = array(
  */
 $messages['nl'] = array(
 	'spreadsheet-desc' => 'Interactief webfrontend dat geüploade spreadsheetbestanden kan lezen en wijzigen',
+	'spreadsheet-loading' => 'Even geduld. De spreadsheet is aan het laden.',
 );
 
 /** Pashto (پښتو)
