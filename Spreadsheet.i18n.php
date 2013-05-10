@@ -60,6 +60,7 @@ $messages['es'] = array(
  */
 $messages['fr'] = array(
 	'spreadsheet-desc' => 'Un terminal web interactif capable de lire et modifier les fichiers de feuille de calcul téléchargés',
+	'spreadsheet-loading' => 'Veuillez attendre, la feuille de calcul est en cours de chargement.',
 );
 
 /** Galician (galego)
