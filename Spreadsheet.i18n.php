@@ -55,6 +55,13 @@ $messages['es'] = array(
 	'spreadsheet-desc' => 'Una interfaz web interactiva que permite leer y modificar hojas de cálculo cargadas',
 );
 
+/** Finnish (suomi)
+ * @author Nike
+ */
+$messages['fi'] = array(
+	'spreadsheet-loading' => 'Odota, laskentataulukko latautuu.',
+);
+
 /** French (français)
  * @author Gomoko
  */
