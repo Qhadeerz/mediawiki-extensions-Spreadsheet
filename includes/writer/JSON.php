@@ -30,7 +30,7 @@ class PHPExcel_Writer_JSON {
 			//'rows'             => $sheet->getHighestDataRow(),
 			'data' => array(),
 			//'columnDimensions' => $columnDimensions,
-		);
+			);
 
 		//create merged cells map
 		$mergedCells = array_keys( $sheet->getMergeCells() );
@@ -65,7 +65,7 @@ class PHPExcel_Writer_JSON {
 				$json[ 'data' ][ $cell->getCoordinate() ][ 'formula' ] = $formula;
 
 				if ( $cell->hasDataValidation() ) {
-					$json[ 'data' ][ $cell->getCoordinate() ][ 'metadata' ][ 'validation' ] = $this->getDataValidation( $cell->getDataValidation() );
+					$json[ 'data' ][ $cell->getCoordinate() ][ 'dataValidation' ] = $this->getDataValidation( $cell->getDataValidation() );
 				}
 
 				if ( array_key_exists( $cell->getCoordinate(), $cellColspan ) ) {
@@ -87,7 +87,7 @@ class PHPExcel_Writer_JSON {
 				/*'labels' => array(
 					'xAxis' =>is_null($chart->getXAxisLabel()) ? '' : $chart->getXAxisLabel()->getCaption()->getPlainText(),
 					'yAxis' => is_null($chart->getYAxisLabel()) ?  '' : $chart->getYAxisLabel()->getCaption()->getPlainText(),
-				),*/
+					),*/
 			);
 		}
 
@@ -98,7 +98,7 @@ class PHPExcel_Writer_JSON {
 		return array(
 			//'layout'    => $this->getLayout( $plotArea->getLayout() ),
 			'plotGroup' => $this->getPlotGroupCollection( $plotArea->getPlotGroup() ),
-		);
+			);
 	}
 
 	private function getLayout ( PHPExcel_Chart_Layout $layout ) {
@@ -117,7 +117,7 @@ class PHPExcel_Writer_JSON {
 			'showPercent'     => $layout->getShowPercent(),
 			'showBubbleSize'  => $layout->getShowBubbleSize(),
 			'showLeaderLines' => $layout->getShowLeaderLines(),
-		);
+			);
 	}
 
 	private function getPlotGroupCollection ( array $plotGroups ) {
@@ -138,7 +138,7 @@ class PHPExcel_Writer_JSON {
 			'smoothLine' => $plotGroup->getSmoothLine(),
 			'data'       => $this->getPlotData( $plotGroup ),
 			'seriesCount' => $plotGroup->getPlotSeriesCount(),
-		);
+			);
 
 	}
 
@@ -157,7 +157,7 @@ class PHPExcel_Writer_JSON {
 			'dataSource' => $dataSeriesValue->getDataSource(),
 			'format'     => $dataSeriesValue->getFormatCode(),
 			'marker'     => $dataSeriesValue->getPointMarker(),
-		);
+			);
 	}
 
 	public function getChartTitle ( PHPExcel_Chart_Title $title ) {
@@ -178,7 +178,7 @@ class PHPExcel_Writer_JSON {
 		return array(
 			'text' => $text->getText(),
 			'font' => $this->getFont( $text->getFont() ),
-		);
+			);
 	}
 
 	private function getFont ( $font ) {
@@ -192,7 +192,7 @@ class PHPExcel_Writer_JSON {
 			'strikethrough' => $font->getStrikethrough(),
 			'subscript'     => $font->getSubScript(),
 			'superscript'   => $font->getSuperScript(),
-		);
+			);
 	}
 
 	private function getPlotData ( PHPExcel_Chart_DataSeries $plotGroup ) {
@@ -201,7 +201,7 @@ class PHPExcel_Writer_JSON {
 			'label'    => $this->getDataSeriesValuesCollection( $plotGroup->getPlotLabels() ),
 			'category' => $this->getDataSeriesValuesCollection( $plotGroup->getPlotCategories() ),
 			'value'    => $this->getDataSeriesValuesCollection( $plotGroup->getPlotValues() ),
-		);
+			);
 		$result = array();
 		foreach ( $ordering as $oKey => $oVal ) {
 			foreach ( $data as $dKey => $dVal ) {
@@ -220,20 +220,23 @@ class PHPExcel_Writer_JSON {
 	private function getDataValidation ( PHPExcel_Cell_DataValidation $validation ) {
 		return array(
 			'type'     => $validation->getType(),
-			//'allowBlank'       => $validation->getAllowBlank(),
-			//'error'            => $validation->getError(),
-			//'errorStyle'       => $validation->getErrorStyle(),
-			//'errorTitle'       => $validation->getErrorTitle(),
-			'formula1' => $validation->getFormula1(),
-			//'formula2'         => $validation->getFormula2(),
-			//'operator'         => $validation->getOperator(),
-			//'prompt'           => $validation->getPrompt(),
-			//'promptTitle'      => $validation->getPromptTitle(),
-			//'showDropDown'     => $validation->getShowDropDown(),
-			//'showErrorMessage' => $validation->getShowErrorMessage(),
-			//'showInputMessage' => $validation->getShowInputMessage(),
-
-		);
+			'operator'         => $validation->getOperator() === '' ? 'between' : $validation->getOperator(),
+			'args' => array(
+				$validation->getFormula1(),
+				$validation->getFormula2(),
+				),
+			'options' => array(
+				'allowBlank'       => $validation->getAllowBlank(),
+				'errorText'        => $validation->getError(),
+				'errorType'        => $validation->getErrorStyle(),
+				'errorTitle'       => $validation->getErrorTitle(),
+				'promptText'       => $validation->getPrompt(),
+				'promptTitle'      => $validation->getPromptTitle(),
+				'showDropDown'     => $validation->getShowDropDown(),
+				'showErrorMessage' => $validation->getShowErrorMessage(),
+				'showInputMessage' => $validation->getShowInputMessage(),				
+				),
+			);
 	}
 
 }
