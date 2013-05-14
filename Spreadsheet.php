@@ -68,6 +68,8 @@ $wgResourceModules['spreadsheet.core'] = array(
 	),
 	'dependencies' => array(
 		'jquery.ui.core',
+		'jquery.ui.dialog',
+		'jquery.ui.autocomplete',
 		'jquery.ui.progressbar',
 		'jquery.effects.core',
 	),

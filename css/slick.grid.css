@@ -85,11 +85,9 @@ classes should alter those!
 
 .slick-cell, .slick-headerrow-column {
   position: absolute;
-
   border: 1px solid transparent;
   border-right: 1px dotted silver;
   border-bottom-color: silver;
-
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -97,9 +95,6 @@ classes should alter those!
   z-index: 1;
   padding: 1px 2px 2px 1px;
   margin: 0;
-
-  white-space: nowrap;
-
   cursor: default;
 }
 
@@ -154,4 +149,9 @@ classes should alter those!
   z-index: 10;
   position: absolute;
   border: 2px dashed black;
+}
+
+.slick-row .selected {
+  border-color: lightskyblue;
+  border-style: solid;
 }

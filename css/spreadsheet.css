@@ -23,3 +23,36 @@
 	opacity: 1;
 	font-weight: bold;
 }
+
+#data-validation-dialog{
+	background-repeat:no-repeat;
+	background-position: 10px center;
+	padding-left: 50px;
+}
+
+#data-validation-dialog.stop{
+	background-image: url(../images/dialog-stop.png);
+}
+
+#data-validation-dialog.warning{
+	background-image: url(../images/dialog-warning.png);
+}
+
+#data-validation-dialog.information{
+	background-image: url(../images/dialog-information.png);
+}
+
+.spreadsheet-message {
+	border: 1px solid black;
+	padding: 2px 5px;
+	font-size: 10px;
+	background-color: #FFC059;
+	border-radius: 2px;
+	opacity: 0.8;
+}
+
+.spreadsheet-message p:first-child {
+	font-size: 11px;
+	font-weight: bold;
+
+}
