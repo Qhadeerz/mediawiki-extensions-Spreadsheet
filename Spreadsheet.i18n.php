@@ -39,6 +39,13 @@ $messages['bn'] = array(
 	'spreadsheet-loading' => 'অনুগ্রহ করে অপেক্ষা করুন, স্প্রেডশিট লোড হচ্ছে।',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'spreadsheet-loading' => 'Gortozit mar plij, emañ o kargañ ar follenn jediñ.',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -91,6 +98,14 @@ $messages['ja'] = array(
  */
 $messages['ko'] = array(
 	'spreadsheet-desc' => '올린 스프레드시트 파일을 읽고 수정할 수 있는 대화형 웹 프론트엔드',
+);
+
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'spreadsheet-desc' => 'Heh met kam_mer mer huhjelaade Datteije met Rääscheblädder lässe un verändere.',
+	'spreadsheet-loading' => 'Ene Momang, et Blatt weed jelaade{{int:ellipsis}}',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
