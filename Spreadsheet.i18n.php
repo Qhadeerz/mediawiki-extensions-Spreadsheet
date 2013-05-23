@@ -85,6 +85,13 @@ $messages['gl'] = array(
 	'spreadsheet-loading' => 'Por favor, agarde. Cargando a folla de cálculo.',
 );
 
+/** Hebrew (עברית)
+ * @author ExampleTomer
+ */
+$messages['he'] = array(
+	'spreadsheet-loading' => 'אנא המתן, הגיליון האלקטרוני נטען.',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
