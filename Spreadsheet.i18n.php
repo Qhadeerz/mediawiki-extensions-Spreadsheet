@@ -32,6 +32,14 @@ $messages['af'] = array(
 	'spreadsheet-desc' => "'n Interaktiewe web-koppelvlak wat gelaaide spreitabelle kan lees en wysig.",
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'spreadsheet-desc' => 'Una interfaz web interactiva capaz de lleer y camudar les fueyes de cálculu xubíes.',
+	'spreadsheet-loading' => 'Espere, por favor, la fueya de cálculu ta cargando.',
+);
+
 /** Bengali (বাংলা)
  * @author Bellayet
  */
