@@ -218,7 +218,7 @@ class PHPExcel_Writer_JSON {
 	}
 
 	private function getDataValidation ( PHPExcel_Cell_DataValidation $validation ) {
-		return array(
+		$out = array(
 			'type'     => $validation->getType(),
 			'operator'         => $validation->getOperator() === '' ? 'between' : $validation->getOperator(),
 			'args' => array(
@@ -237,6 +237,12 @@ class PHPExcel_Writer_JSON {
 				'showInputMessage' => $validation->getShowInputMessage(),				
 				),
 			);
+
+		if($out['type'] === 'list'){
+			$out['args'][0] = trim($out['args'][0],'"');
+		}
+
+		return $out;
 	}
 
 }
