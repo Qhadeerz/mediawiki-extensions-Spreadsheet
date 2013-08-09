@@ -113,6 +113,7 @@ $messages['ja'] = array(
  */
 $messages['ko'] = array(
 	'spreadsheet-desc' => '올린 스프레드시트 파일을 읽고 수정할 수 있는 대화형 웹 프론트엔드',
+	'spreadsheet-loading' => '기다리세요, 스프레드시트를 불러오고 있습니다.',
 );
 
 /** Colognian (Ripoarisch)
