@@ -148,6 +148,14 @@ $messages['nl'] = array(
 	'spreadsheet-loading' => 'Even geduld. De spreadsheet is aan het laden.',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'spreadsheet-desc' => 'Un terminal web interactiu capable de legir e modificar los fichièrs de fuèlh de calcul telecargats',
+	'spreadsheet-loading' => 'Esperatz, lo fuèlh de calcul es en cors de cargament.',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
