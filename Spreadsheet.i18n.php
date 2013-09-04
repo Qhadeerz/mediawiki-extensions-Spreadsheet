@@ -100,6 +100,14 @@ $messages['he'] = array(
 	'spreadsheet-loading' => 'אנא המתן, הגיליון האלקטרוני נטען.',
 );
 
+/** Italian (italiano)
+ * @author Gianfranco
+ */
+$messages['it'] = array(
+	'spreadsheet-desc' => 'Un frontend web interattivo in grado di leggere e modificare i file foglio di calcolo caricati.',
+	'spreadsheet-loading' => 'Si prega di attendere, il foglio di calcolo è in fase di caricamento.',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
