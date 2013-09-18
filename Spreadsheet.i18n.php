@@ -171,6 +171,14 @@ $messages['ps'] = array(
 	'spreadsheet-loading' => 'لطفاً تم شۍ، سپرېډشيټ برسېرېدو کې دی.',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
+ */
+$messages['pt-br'] = array(
+	'spreadsheet-desc' => 'Uma interface interativa capaz de ler e modificar planilhas carregadas',
+	'spreadsheet-loading' => 'Por favor, carregando a planilha.',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
