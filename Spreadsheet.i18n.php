@@ -203,3 +203,11 @@ $messages['uk'] = array(
 	'spreadsheet-desc' => 'Інтерактивна веб-оболонка, здатна читати та редагувати вивантаження файли електронних таблиць',
 	'spreadsheet-loading' => 'Зачекайте, електронна таблиця завантажується.',
 );
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'spreadsheet-desc' => '一个交互式网页前端，可以读取和修改上传的电子表格文件。',
+	'spreadsheet-loading' => '请稍候，电子表格加载中。',
+);
