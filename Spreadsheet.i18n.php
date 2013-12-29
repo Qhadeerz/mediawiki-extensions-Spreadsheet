@@ -62,6 +62,14 @@ $messages['de'] = array(
 	'spreadsheet-loading' => 'Bitte warten. Arbeitsblatt wird geladen.',
 );
 
+/** Lower Sorbian (dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'spreadsheet-desc' => 'Interaktiwny webprogram za cytanje a wobźěłowanje nagratych datajow tabelowych kalkulacijow',
+	'spreadsheet-loading' => 'Pšosym cakaj, tabelowe łopjeno se zacytujo.',
+);
+
 /** Spanish (español)
  * @author Fitoschido
  * @author Fortega
@@ -98,6 +106,14 @@ $messages['gl'] = array(
  */
 $messages['he'] = array(
 	'spreadsheet-loading' => 'אנא המתן, הגיליון האלקטרוני נטען.',
+);
+
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'spreadsheet-desc' => 'Interaktiwny webprogram za čitanje a wobdźěłowanje nahratych datajow tabelowych kalkulacijow',
+	'spreadsheet-loading' => 'Prošu čakaj, tabelowe łopjeno so začituje.',
 );
 
 /** Italian (italiano)
