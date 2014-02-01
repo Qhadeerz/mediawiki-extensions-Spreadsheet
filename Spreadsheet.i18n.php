@@ -75,7 +75,8 @@ $messages['dsb'] = array(
  * @author Fortega
  */
 $messages['es'] = array(
-	'spreadsheet-desc' => 'Una interfaz web interactiva que permite leer y modificar hojas de cálculo cargadas',
+	'spreadsheet-desc' => 'Una interfaz web interactiva que permite leer y modificar hojas de cálculo cargadas.',
+	'spreadsheet-loading' => 'Por favor, espere; la hoja de cálculo se está cargando.',
 );
 
 /** Finnish (suomi)
