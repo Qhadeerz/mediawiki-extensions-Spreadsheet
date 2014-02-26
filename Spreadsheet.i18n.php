@@ -79,6 +79,13 @@ $messages['es'] = array(
 	'spreadsheet-loading' => 'Por favor, espere; la hoja de cálculo se está cargando.',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'spreadsheet-loading' => 'لطفا صبر کنید، نمایشگر در حال بارگذاری است.',
+);
+
 /** Finnish (suomi)
  * @author Nike
  */
