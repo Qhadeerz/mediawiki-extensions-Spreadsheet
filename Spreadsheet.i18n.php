@@ -81,9 +81,11 @@ $messages['es'] = array(
 
 /** Persian (فارسی)
  * @author Armin1392
+ * @author Ebraminio
  */
 $messages['fa'] = array(
-	'spreadsheet-loading' => 'لطفا صبر کنید، نمایشگر در حال بارگذاری است.',
+	'spreadsheet-desc' => 'ظاهر وب تعاملی قادر به خواندن و تغییر پوشه‌های صفحه گسترده انتقال است.',
+	'spreadsheet-loading' => 'لطفاً صبر کنید، نمایشگر در حال بارگذاری است.',
 );
 
 /** Finnish (suomi)
