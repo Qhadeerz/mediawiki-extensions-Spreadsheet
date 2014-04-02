@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Toliño"
+        ]
+    },
+    "spreadsheet-desc": "Unha estrutura web interactiva capaz de ler e modificar follas de cálculo cargadas",
+    "spreadsheet-loading": "Por favor, agarde. Cargando a folla de cálculo."
+}

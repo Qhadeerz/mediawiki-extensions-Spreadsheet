@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "Cainamarques"
+        ]
+    },
+    "spreadsheet-desc": "Uma interface interativa capaz de ler e modificar planilhas carregadas",
+    "spreadsheet-loading": "Por favor, carregando a planilha."
+}

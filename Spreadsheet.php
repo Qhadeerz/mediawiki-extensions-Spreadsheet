@@ -11,7 +11,7 @@ if (!class_exists( "PHPExcel" )) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Spreadsheet',
-	'version' => 0.1,
+	'version' => '0.2.0',
 	'author' => 'Kim Eik',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Spreadsheet',
 	'descriptionmsg' => 'spreadsheet-desc'
@@ -38,15 +38,16 @@ $wgSpreadsheetIncludes = dirname(__FILE__) . '/includes';
 $wgAutoloadClasses['PHPExcel_Writer_JSON'] = $wgSpreadsheetIncludes . '/writer/JSON.php';
 
 //i18n
+$wgMessagesDirs['Spreadsheet'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Spreadsheet'] = dirname(__FILE__) . '/Spreadsheet.i18n.php';
 
 //Resources
 $wgResourceModules['spreadsheet.core'] = array(
 	'scripts' => array(
 		'lib/spreadsheet-js/lib/efp/efp.js',
-		'lib/spreadsheet-js/lib/slickgrid/lib/jquery.event.drag-2.0.min.js',					
-		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.autotooltips.js',				
-		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.cellrangedecorator.js',		
+		'lib/spreadsheet-js/lib/slickgrid/lib/jquery.event.drag-2.0.min.js',
+		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.autotooltips.js',
+		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.cellrangedecorator.js',
 		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.cellrangeselector.js',
 		'lib/spreadsheet-js/lib/slickgrid/plugins/slick.cellselectionmodel.js',
 		'lib/spreadsheet-js/lib/slickgrid/slick.core.js',
