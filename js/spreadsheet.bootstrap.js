@@ -126,7 +126,7 @@ $(document).ready(function(){
 					})(c),1000);
 				}
 			}catch(err){
-				alert('Error occured while updating point!');
+				alert('Error occurred while updating point!');
 			}
 		};
 	}
