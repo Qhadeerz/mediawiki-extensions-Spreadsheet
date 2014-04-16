@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xuacu"
-        ]
-    },
-    "spreadsheet-desc": "Una interfaz web interactiva capaz de lleer y camudar les fueyes de cálculu xubíes.",
-    "spreadsheet-loading": "Espere, por favor, la fueya de cálculu ta cargando."
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"spreadsheet-desc": "Una interfaz web interactiva capaz de lleer y camudar les fueyes de cálculu xubíes.",
+	"spreadsheet-loading": "Espere, por favor, la fueya de cálculu ta cargando."
 }

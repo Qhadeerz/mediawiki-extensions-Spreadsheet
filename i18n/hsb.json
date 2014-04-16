@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "spreadsheet-desc": "Interaktiwny webprogram za čitanje a wobdźěłowanje nahratych datajow tabelowych kalkulacijow",
-    "spreadsheet-loading": "Prošu čakaj, tabelowe łopjeno so začituje."
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"spreadsheet-desc": "Interaktiwny webprogram za čitanje a wobdźěłowanje nahratych datajow tabelowych kalkulacijow",
+	"spreadsheet-loading": "Prošu čakaj, tabelowe łopjeno so začituje."
 }

@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Metalhead64"
-        ]
-    },
-    "spreadsheet-desc": "Ein interaktives Web-Frontend zum Lesen und Bearbeiten von hochgeladenen Tabellenkalkulationsdateien.",
-    "spreadsheet-loading": "Bitte warten. Arbeitsblatt wird geladen."
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"spreadsheet-desc": "Ein interaktives Web-Frontend zum Lesen und Bearbeiten von hochgeladenen Tabellenkalkulationsdateien.",
+	"spreadsheet-loading": "Bitte warten. Arbeitsblatt wird geladen."
 }

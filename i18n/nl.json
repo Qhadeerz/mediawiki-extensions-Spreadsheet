@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Siebrand"
-        ]
-    },
-    "spreadsheet-desc": "Interactief webfrontend dat geüploade spreadsheetbestanden kan lezen en wijzigen",
-    "spreadsheet-loading": "Even geduld. De spreadsheet is aan het laden."
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"spreadsheet-desc": "Interactief webfrontend dat geüploade spreadsheetbestanden kan lezen en wijzigen",
+	"spreadsheet-loading": "Even geduld. De spreadsheet is aan het laden."
 }

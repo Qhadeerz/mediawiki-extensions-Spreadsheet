@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shirayuki"
-        ]
-    },
-    "spreadsheet-desc": "アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド",
-    "spreadsheet-loading": "お待ちください。表計算ファイルを読み込んでいます。"
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"spreadsheet-desc": "アップロードされた表計算ファイルを閲覧/編集できる対話的なウェブ フロントエンド",
+	"spreadsheet-loading": "お待ちください。表計算ファイルを読み込んでいます。"
 }

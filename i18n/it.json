@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gianfranco"
-        ]
-    },
-    "spreadsheet-desc": "Un frontend web interattivo in grado di leggere e modificare i file foglio di calcolo caricati.",
-    "spreadsheet-loading": "Si prega di attendere, il foglio di calcolo è in fase di caricamento."
+	"@metadata": {
+		"authors": [
+			"Gianfranco"
+		]
+	},
+	"spreadsheet-desc": "Un frontend web interattivo in grado di leggere e modificare i file foglio di calcolo caricati.",
+	"spreadsheet-loading": "Si prega di attendere, il foglio di calcolo è in fase di caricamento."
 }

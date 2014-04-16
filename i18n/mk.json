@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bjankuloski06"
-        ]
-    },
-    "spreadsheet-desc": "Интерактивна алатка за читање и менување на подигнати пресметковни табели",
-    "spreadsheet-loading": "Почекајте. Вчитувам."
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"spreadsheet-desc": "Интерактивна алатка за читање и менување на подигнати пресметковни табели",
+	"spreadsheet-loading": "Почекајте. Вчитувам."
 }
