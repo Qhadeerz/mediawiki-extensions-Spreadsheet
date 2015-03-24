@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Kim Eik",
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
-	"spreadsheet-desc": "{{desc|name=Spreadsheet|url=http://www.mediawiki.org/wiki/Extension:Spreadsheet}}",
+	"spreadsheet-desc": "{{desc|name=Spreadsheet|url=https://www.mediawiki.org/wiki/Extension:Spreadsheet}}",
 	"spreadsheet-loading": "text visible on progressbar while loading a spreadsheet file."
 }
