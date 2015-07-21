@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Fortega"
+			"Fortega",
+			"Macofe"
 		]
 	},
 	"spreadsheet-desc": "Una interfaz web interactiva que permite leer y modificar hojas de cálculo cargadas.",
-	"spreadsheet-loading": "Por favor, espere; la hoja de cálculo se está cargando."
+	"spreadsheet-loading": "Espera: la hoja de cálculo se está cargando."
 }
