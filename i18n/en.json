@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kim Eik"
-        ]
-    },
-    "spreadsheet-desc": "An interactive web frontend capable of reading and modifying uploaded spreadsheet files.",
-    "spreadsheet-loading": "Please wait, spreadsheet is loading."
+	"@metadata": {
+		"authors": [
+			"Kim Eik"
+		]
+	},
+	"spreadsheet-desc": "An interactive web frontend capable of reading and modifying uploaded spreadsheet files.",
+	"spreadsheet-loading": "Please wait, spreadsheet is loading."
 }
