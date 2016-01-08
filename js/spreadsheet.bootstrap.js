@@ -1,10 +1,11 @@
-$(document).ready(function(){
+/*jshint -W083 */
+jQuery(document).ready(function(){
 	function createSpreadsheet(container,cellData){
 		return new Spreadsheet.Slick(container,cellData);
 	}
 
 	//TODO create conversion logic that supports all possible excel graphs?
-	function convertChartDataToHighCharts(c,cellData){
+	function convertChartDataToHighCharts(c){
 		var hc = {
 			start: c.start.cell,
 			end: c.end.cell,
@@ -16,6 +17,7 @@ $(document).ready(function(){
 			chart: {},
 			plotOptions: {}
 		};
+		var x;
 
 		var plotGroup = c.data.plotGroup[0];
 		var data = plotGroup.data;
@@ -36,14 +38,14 @@ $(document).ready(function(){
 			}
 			break;
 			case 'scatterChart':
-			hc.chart = $.extend(hc.chart,{
+			hc.chart = jQuery.extend(hc.chart,{
 				type: 'scatter',
 				zoomType: 'xy',
 				inverted: 'true'
 			});
 			hc.xAxis.labels.rotation = 0;
 
-			for(var x = 0; x < data.length; x++){
+			for(x = 0; x < data.length; x++){
 				if(!hc.series[x]){
 					hc.series[x] = {};
 				}
@@ -79,7 +81,7 @@ $(document).ready(function(){
 		}
 
 		if(hc.series.length === 0){
-			for(var x = 0; x < data.length; x++){
+			for(x = 0; x < data.length; x++){
 				if(!hc.series[x]){
 					hc.series[x] = {};
 				}
@@ -126,7 +128,7 @@ $(document).ready(function(){
 					})(c),1000);
 				}
 			}catch(err){
-				alert('Error occurred while updating point!');
+				window.alert('Error occurred while updating point!');
 			}
 		};
 	}
@@ -134,8 +136,6 @@ $(document).ready(function(){
 	function renderChart(config,spreadsheetSlick){
 		var grid = spreadsheetSlick.getGrid();
 		var spreadsheet = spreadsheetSlick.getSpreadsheet();
-
-		var appendChartInterval = setInterval(appendChart,500);
 
 		function appendChart(){
 			var startPos = Spreadsheet.parsePosition(config.start);
@@ -151,30 +151,30 @@ $(document).ready(function(){
 			delete config.end;
 
 			var chartStartPos = {
-				left: $(startCellNode).position().left,
-				top: $(startCellNode).parent().position().top
+				left: jQuery(startCellNode).position().left,
+				top: jQuery(startCellNode).parent().position().top
 			};
 
 			var chartEndPos = {
-				left: $(endCellNode).position().left,
-				top: $(endCellNode).parent().position().top
+				left: jQuery(endCellNode).position().left,
+				top: jQuery(endCellNode).parent().position().top
 			};
 
-			var chartX = chartStartPos.top;
-			var chartY = chartStartPos.left;
+			// var chartX = chartStartPos.top;
+			// var chartY = chartStartPos.left;
 			var chartWidth = chartEndPos.left-chartStartPos.left;
 			var chartHeight = chartEndPos.top-chartStartPos.top;
 
 			var chartId = 'chart-'+Date.now();
-			var chartNode = $('<div></div>').css({
+			/*var chartNode = jQuery('<div></div>').css({
 				position: 'absolute',
 				top:chartX,
 				left:chartY,
 				zIndex:100
-			}).attr('id',chartId).appendTo('.grid-canvas');
+			}).attr('id',chartId).appendTo('.grid-canvas');*/
 
 
-			config = $.extend(true,{
+			config = jQuery.extend(true,{
 				chart: {
 					renderTo: chartId,
 					width: chartWidth,
@@ -230,26 +230,28 @@ $(document).ready(function(){
 			//Chart is now appended, so lets clear the interval
 			clearInterval(appendChartInterval);
 		}
+		var appendChartInterval = setInterval(appendChart,500);
 	}
 
 	for(var key in window.spreadsheet){
 		if(window.spreadsheet[key]){
 			var spreadsheetData = window.spreadsheet[key];
 			var selector = '#'+key;
-			if(spreadsheetData['adapter'] === 'phpexcel'){
+			if(spreadsheetData.adapter === 'phpexcel'){
 				//PHPEXCEL ADAPTER (Server side prosessing of excel documents)
-				$( selector).find('.progressbar').progressbar({
+				jQuery(selector).find('.progressbar').progressbar({
 					value: false
 				});
 				var file = window.spreadsheet[key].file;
 				var sheet = window.spreadsheet[key].sheet;
-				$.get(
-					mw.util.wikiScript(), {
+				jQuery.get(
+					mediaWiki.util.wikiScript(), {
 						action: 'ajax',
 						rs: 'SpreadsheetAjax::getData',
 						rsargs: [file,sheet]
 					}
 					).done(function(resp){
+						var json;
 						json = JSON.parse(resp);
 						var cellData = json.data;
 						var chartData = json.charts;
@@ -279,24 +281,24 @@ $(document).ready(function(){
 				});
 
 
-				}else if(spreadsheetData['adapter'] === 'zip'){
-				//ZIP ADAPTER (client side prosessing of excel documents)
-				spreadsheetZipAdapter = new SpreadsheetZipAdapter(
-					spreadsheetData.url,
-					spreadsheetData.sheetIndex,
-					function(data){
-						console.log(data);
-						createSpreadsheet(selector,data);
-					},
-					function(c,max){
-						var progressbar = $(selector).children('.progressbar');
-						progressbar.progressbar( "option", {
-							value:c/max*100
-						});
-					}
+				}else if(spreadsheetData.adapter === 'zip'){
+					var spreadsheetZipAdapter;
+					//ZIP ADAPTER (client side prosessing of excel documents)
+					spreadsheetZipAdapter = new SpreadsheetZipAdapter(
+						spreadsheetData.url,
+						spreadsheetData.sheetIndex,
+						function(data){
+							window.console.log(data);
+							createSpreadsheet(selector,data);
+						},
+						function(c,max){
+							var progressbar = jQuery(selector).children('.progressbar');
+							progressbar.progressbar( "option", {
+								value:c/max*100
+							});
+						}
 					);
 			}
-
 		}
 	}
-});
+}());

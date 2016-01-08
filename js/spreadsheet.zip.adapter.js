@@ -1,7 +1,10 @@
-function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
+/*jshint -W083 */
+( function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
 
 	function getParsedText(text){
+		var xmlDoc, ActiveXObject;
 		if (window.DOMParser){
+			var parser;
 			parser = new DOMParser();
 			xmlDoc = parser.parseFromString(text,"text/xml");
 		}else{
@@ -32,8 +35,8 @@ function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
 		if (len >= 100){
 			mod = Math.floor(len/100);
 		}
-		console.log(len);
-		console.log(mod);
+		window.console.log(len);
+		window.console.log(mod);
 		for(var c = 0; c < len; c++){
 			(function(cell){
 				var type = cell.getAttribute('t');
@@ -118,18 +121,20 @@ function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
 		});
 	}
 
+	var zip;
+
 	if(!zip){
 		throw "Requires zip library";
 	}
 	if( window.Worker ){
 		//TODO this should probably not be hardcoded like this
-		zip.workerScriptsPath = "/mw/extensions/Spreadsheet/lib/zip/WebContent/";
+		zip.workerScriptsPath = "/extensions/Spreadsheet/lib/zip/WebContent/";
 	}else{
 		zip.useWebWorkers = false;
 	}
 
 	zip.createReader(new zip.HttpReader(URL), function(reader) {
-		console.log(reader);
+		window.console.log(reader);
 		reader.getEntry = getEntry;
 
 		reader.getEntry('xl/sharedStrings.xml',function(entry){
@@ -137,7 +142,7 @@ function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
 				var sst = readSharedStrings(text);
 
 				var sheetFileName = 'xl/worksheets/sheet'+(sheet+1)+'.xml';
-				console.log(sheetFileName);
+				window.console.log(sheetFileName);
 				var sheetEntry = reader.getEntry(sheetFileName,function(entry){
 					entry.getData(new zip.TextWriter(), function(text){
 						dataCb(readData(sst,text,progressCb));
@@ -148,8 +153,11 @@ function SpreadsheetZipAdapter(URL,sheet,dataCb,progressCb){
 		});
 		
 		reader.close();
-	}, 
+	});/*,*/
+	/*
 	function(error) {
 	// onerror callback
-	});
-}
+	}
+	*/
+	/*);*/
+}());
