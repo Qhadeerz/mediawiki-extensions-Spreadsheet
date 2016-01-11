@@ -4,9 +4,11 @@ if (!defined('MEDIAWIKI')) {
 	die('Not an entry point.');
 }
 
-if (!class_exists( "PHPExcel" )) {
-	die('Requires PHPExcel extension');
-}
+$wgExtensionFunctions[] = function () {
+	if (!class_exists( "PHPExcel" )) {
+		die('Spreadsheet extensions requires PHPExcel extension');
+	}
+};
 
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
