@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"spreadsheet-desc": "En interaktiv webfrontend som kan lese og endre opplastede regnearkfiler.",
+	"spreadsheet-loading": "Vent, regnearket lastes."
+}
