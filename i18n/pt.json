@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"spreadsheet-desc": "Uma interface web interativa capaz de ler e modificar folhas de cálculo carregadas.",
+	"spreadsheet-loading": "Aguarde, por favor, a folha de cálculo está a ser carregada."
+}
