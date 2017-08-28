@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Trial"
+			"Trial",
+			"Wladek92"
 		]
 	},
-	"spreadsheet-desc": "Un terminal web interactif capable de lire et modifier les fichiers de feuille de calcul téléversés.",
+	"spreadsheet-desc": "Un terminal web interactif capable de lire et modifier les fichiers de feuille de calcul téléversés",
 	"spreadsheet-loading": "Veuillez attendre, la feuille de calcul est en cours de chargement."
 }
