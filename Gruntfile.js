@@ -11,7 +11,9 @@ module.exports = function ( grunt ) {
 			},
 			all: [
 				'**/*.js',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**',
+				'!lib/**'
 			]
 		},
 		banana: {
@@ -20,7 +22,9 @@ module.exports = function ( grunt ) {
 		jsonlint: {
 			all: [
 				'**/*.json',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**',
+				'!lib/**'
 			]
 		}
 	} );
