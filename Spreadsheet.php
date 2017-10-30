@@ -41,7 +41,6 @@ $wgAutoloadClasses['PHPExcel_Writer_JSON'] = $wgSpreadsheetIncludes . '/writer/J
 
 //i18n
 $wgMessagesDirs['Spreadsheet'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['Spreadsheet'] = dirname(__FILE__) . '/Spreadsheet.i18n.php';
 
 //Resources
 $wgResourceModules['spreadsheet.core'] = array(
